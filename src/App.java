@@ -2,7 +2,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.rmi.server.ExportException;
+import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
 
@@ -13,7 +13,7 @@ public class App {
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
         String body = response.body();
 
         //System.out.println(body);
@@ -24,9 +24,18 @@ public class App {
         List<Map<String, String>> listaDeFilmes = parser.parse(body);
 
         //Retorno da lista de filmes
-     /*   System.out.println(listaDeFilmes.size());
-        System.out.println(listaDeFilmes.get(0));*/
+        System.out.println(listaDeFilmes.size());
+        System.out.println(listaDeFilmes.get(0));
 
         //Exibir e manipular os dados na aplicação
+
+        for (Map<String,String> filme : listaDeFilmes) {
+            System.out.println(filme.get("title"));
+            System.out.println(filme.get("image"));
+
+            System.out.println(filme.get("imDbRating"));
+
+            System.out.println();
+        }
     }
 }
