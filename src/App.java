@@ -3,6 +3,8 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.rmi.server.ExportException;
+import java.util.List;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -14,8 +16,16 @@ public class App {
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
         String body = response.body();
 
-        System.out.println(body);
-        //Extrair dados: Titulo, post e classificação
+        //System.out.println(body);
+
+        //Extrair dados: Titulo, post e classificação - Utilizando expressão regular na classe JsonParser
+
+        var parser = new JsonParser();
+        List<Map<String, String>> listaDeFilmes = parser.parse(body);
+
+        //Retorno da lista de filmes
+     /*   System.out.println(listaDeFilmes.size());
+        System.out.println(listaDeFilmes.get(0));*/
 
         //Exibir e manipular os dados na aplicação
     }
