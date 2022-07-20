@@ -1,3 +1,4 @@
+import java.io.FileInputStream;
 import java.io.PrintStream;
 import java.net.URI;
 import java.net.http.HttpClient;
@@ -6,11 +7,17 @@ import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 public class App {
     public static void main(String[] args) throws Exception {
         // Fazer uma conexão HTTP e buscar os top 250 filmes
-        String url = "https://api.mocki.io/v2/549a5d8b";
+
+        Properties prop = new Properties();
+        FileInputStream file = new FileInputStream("./resources/app.properties");
+        prop.load(file);
+
+        String url = prop.getProperty("apiUrl");
         URI endereco = URI.create(url);
         var client = HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder(endereco).GET().build();
