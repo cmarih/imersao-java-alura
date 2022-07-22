@@ -4,40 +4,33 @@
 <h2 > Consumindo uma API de filmes</h2>
 <br> 
 
-
-## 📝 Sumário
-
-- [Sobre](#sobre)
-- [Começando](#comecando)
-- [Saída](#saida)
-- [Ferramentas](#ferramentas)
-- [Colaboradores](#colaboradores)
-
 ## 🧐 Sobre <a name = "sobre"></a>
 
-Código desenvolvido na primeira aula da imersão, consiste em consumir uma API de filmes e exibir a
-classificação de cada um deles.
+Código desenvolvido na Imersão Java da Alura, consite em consumir uma Api de filmes na aula 01 e
+na Aula 2 é desenvolvido um gerador de fiurinhas com os posters dos melhores filmes.
 
 
-## 🏁 Começando <a name = "comecando"></a>
+## 🏁 Começando 
 
 Necessário conhecimento básico da liguagem Java, utilização do JDK 11
 
-## 🎈 Saída <a name="saida"></a>
-
-Exemplos da saída atual:
+## 🎈 Aula 01
+Consumindo a API de filmes e aperfeiçoando a exibição da lista de filmes no terminal.
+### Exemplos da saída atual - Aula 1 :
 
 ![Saida Padrão](images/imagem1.png)
 
 ![Saida Padrão](images/imagem2.png)
 
+## 🎈 Aula 02
+Desenvolvemos uma gerador de figurinha para whatsapp, utilizando a API da aula anterior como 
+referência.
 
-## ⛏️ Ferramentas <a name = "ferramentas"></a>
+### Exemplos da saída atual - Aula 2 :
 
-- [Java](https://www.oracle.com/java/technologies/downloads/#java11) - Java JDK
+![Saida Padrão](images/topzera.png)
 
 
 ## ✍️ Colaboradores <a name = "colaboradores"></a>
 
-- [@cmarih](https://github.com/cmarih/) - Trabalho inicial
-- [@felipedoamarals](https://github.com/felipedoamarals/) - Configuração da API fora do código.
+- [@cmarih](https://github.com/cmarih/) 
